@@ -1,4 +1,4 @@
-if SHIELD_faeth_LEFT
+if SHIELD_FAETH_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "faeth"
@@ -8,7 +8,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_faeth_LEFT || SHIELD_faeth_RIGHT
+if SHIELD_FAETH_LEFT || SHIELD_FAETH_RIGHT
 
 config ZMK_SPLIT
     default y
