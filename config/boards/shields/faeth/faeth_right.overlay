@@ -1,20 +1,12 @@
-/*
- * Copyright (c) 2020 Pete Johanson
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include "faeth.dtsi"
 
 &default_transform {
     col-offset = <5>;
 };
 
-&five_column_transform {
-    col-offset = <5>;
-};
-
 &kscan0 {
+    debounce-press-ms = <8>;
+    debounce-release-ms = <16>;
     row-gpios
         = <&pro_micro 1 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
         , <&pro_micro 3 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
@@ -28,4 +20,8 @@
         , <&pro_micro 6 GPIO_ACTIVE_HIGH>
         , <&pro_micro 7 GPIO_ACTIVE_HIGH>
         ;
+};
+
+&bootloader_key_right {
+    status = "okay";
 };
